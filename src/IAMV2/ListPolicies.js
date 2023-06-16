@@ -3,7 +3,8 @@ const AWS = require('aws-sdk');
 const iam = new AWS.IAM();
 
 const params = {
-  Scope: 'Local',
+  Scope: 'All',
+  PolicyUsageFilter: 'PermissionsPolicy',
 };
 
 iam.listPolicies(params, function (err, data) {
