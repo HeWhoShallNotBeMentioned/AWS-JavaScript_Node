@@ -2,7 +2,7 @@ const AWS = require('aws-sdk');
 
 const iam = new AWS.IAM();
 
-const params = { NewUserName: 'Monty', UserName: 'Beckett' };
+const params = { NewUserName: 'Beckett', UserName: 'Monty' };
 
 iam.updateUser(params, function (err, data) {
   if (err) {
