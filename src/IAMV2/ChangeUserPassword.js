@@ -10,3 +10,4 @@ iam.changePassword(params, function (err, data) {
   if (err) console.log(err, err.stack);
   else console.log(data);
 });
+// Changes user logged into the aws SDK only. See .aws credentials file.
