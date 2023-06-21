@@ -9,6 +9,7 @@
   "author": "Chris Underwood",
   "license": "MIT",
   "dependencies": {
+    "@aws-sdk/client-iam": "^3.354.0",
     "aws-sdk": "^2.1397.0"
   }
 }
