@@ -10,7 +10,7 @@ const client = new IAMClient();
 
   try {
     const response = await client.send(new DetachUserPolicyCommand(params));
-    console.log(response);
+    console.log('Policy is detached', response);
   } catch (err) {
     console.log(err);
   }
