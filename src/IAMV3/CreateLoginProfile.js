@@ -12,8 +12,8 @@ const client = new IAMClient();
 
     const response = await client.send(new CreateLoginProfileCommand(params));
     console.log(response);
+    return data;
   } catch (err) {
     console.log(err);
-    return data;
   }
 })();
