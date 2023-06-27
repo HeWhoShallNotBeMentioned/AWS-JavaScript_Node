@@ -17,4 +17,6 @@ aws iam create-login-profile --cli-input-json file://create-login-profile.json
 To Add IAM User Policy to an account
 aws iam attach-user-policy --policy-arn arn:aws:iam::342445434384:policy/BeckettFullPolicy --user-name Golum
 
+To Create Access Key & Secret 
+aws iam create-access-key --user-name Golum
 
