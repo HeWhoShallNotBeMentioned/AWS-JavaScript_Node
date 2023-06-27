@@ -20,3 +20,9 @@ aws iam attach-user-policy --policy-arn arn:aws:iam::342445434384:policy/Beckett
 To Create Access Key & Secret 
 aws iam create-access-key --user-name Golum
 
+To Create User Group
+aws iam create-group --group-name GroupCloudShell
+
+To Add User to Group
+aws iam add-user-to-group --group-name GroupCloudShell --user-name Golum
+
