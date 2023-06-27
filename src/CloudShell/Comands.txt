@@ -1,5 +1,5 @@
 CloudShell and CLI documentation:
-https://docs.aws.amazon.com/cli/latest/reference/ 
+https://awscli.amazonaws.com/v2/documentation/api/latest/index.html
 
 
 To list all users:
@@ -7,6 +7,12 @@ aws iam list-users
 
 To create a new users
 aws iam create-user --user-name Golum
+
+To create new user profile
+    to create file
+aws iam create-login-profile --generate-cli-skeleton > create-login-profile.json
+    to process uploaded file
+aws iam create-login-profile --cli-input-json file://create-login-profile.json
 
 
 
