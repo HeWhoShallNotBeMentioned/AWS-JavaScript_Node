@@ -1,0 +1,9 @@
+
+To list all users:
+aws iam list-users
+
+To create a new users
+aws iam create-user --user-name Golum
+
+
+
