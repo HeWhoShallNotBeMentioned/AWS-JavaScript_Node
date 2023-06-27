@@ -1,3 +1,6 @@
+CloudShell and CLI documentation:
+https://docs.aws.amazon.com/cli/latest/reference/ 
+
 
 To list all users:
 aws iam list-users
