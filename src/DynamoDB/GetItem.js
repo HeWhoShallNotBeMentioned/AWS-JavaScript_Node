@@ -2,7 +2,11 @@ const AWS = require('aws-sdk');
 
 const dynamodb = new AWS.DynamoDB({ region: 'us-west-2' });
 
-const params = { Key: { id: { S: '2' } }, TableName: 'employee' };
+const params = {
+  Key: { id: { S: '2' } },
+  TableName: 'employee',
+  AttributesToGet: ['id', 'age'],
+};
 
 dynamodb.getItem(params, function (err, data) {
   if (err) {
