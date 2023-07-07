@@ -21,5 +21,5 @@ console.log('\nUpdating Item..........\n');
 
 docClient.update(params, function (err, data) {
   if (err) console.log('\nCould not update item. \n\n', err, err.stack);
-  else console.log('Updated item fields successfully.\n\n', data);
+  else console.log('\n Updated item fields successfully.\n\n', data);
 });
