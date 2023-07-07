@@ -17,7 +17,17 @@ dynamodb.batchGetItem(params, function (err, data) {
     console.log(
       'SUCCESS------------------------\n',
       // put in a couple of names in data to return just the array of employee records
-      JSON.stringify(data['Responses']['employee'])
+      JSON.stringify(data['Responses']['employee']),
+      // looped over data to show better formatting.
+      data.Responses.employee.forEach(function (element, index) {
+        console.log(
+          element,
+          '\n',
+          element['id']['S'],
+          element['name']['S'],
+          element['age']['S']
+        );
+      })
     );
   }
 });
