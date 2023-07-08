@@ -2,14 +2,15 @@
   "name": "aws_js_eb",
   "version": "1.0.0",
   "description": "AWS with Node.js and Elastic BeanStalk ",
+  "type": "module",
   "main": "index.js",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Chris Underwood",
   "license": "MIT",
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.363.0",
     "@aws-sdk/client-iam": "^3.354.0",
     "aws-sdk": "^2.1397.0"
   }
