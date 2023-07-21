@@ -4,6 +4,7 @@ const s3 = new AWS.S3({ region: 'us-west-2' });
 
 const params = { Bucket: 'testingbucket4clu' };
 
+// only can delete an empty buckett this way.
 s3.deleteBucket(params, function (err, data) {
   if (err) {
     console.log('\n\nERROR-----------\n\n', err, err.stack);
