@@ -3,10 +3,10 @@ const AWS = require('aws-sdk');
 
 const s3 = new AWS.S3({ region: 'us-west-2' });
 
-var params = {
-  Body: fs.createReadStream('./clitScotus.jpeg'),
+const params = {
+  Body: fs.createReadStream('./funny.jpeg'),
   Bucket: 'testingbucket3clu',
-  Key: 'clitScotus.jpeg',
+  Key: 'funny.jpeg',
   ACL: 'private',
   ContentType: 'application/octet-stream',
 };
