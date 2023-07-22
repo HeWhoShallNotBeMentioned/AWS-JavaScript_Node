@@ -7,6 +7,9 @@ s3.getObject(params, function (err, data) {
   if (err) {
     console.log('\n\nERROR-----------\n\n', err, err.stack);
   } else {
-    console.log('\n\nSUCCESS!!!\n\n  File retrieved!\n\n', data);
+    console.log(
+      '\n\nSUCCESS!!!\n\n  File retrieved!\n\n',
+      JSON.parse(data.Body)
+    );
   }
 });
