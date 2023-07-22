@@ -4,7 +4,7 @@ const s3 = new AWS.S3({ region: 'us-west-2' });
 // can also put accessKeyId and secretAccessKey in config fiel with region
 
 const params = {
-  Bucket: 'testingbucket4clu',
+  Bucket: 'testingbucket1clu',
   ACL: 'private',
 
   CreateBucketConfiguration: { LocationConstraint: 'us-west-2' },
