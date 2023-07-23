@@ -2,7 +2,7 @@ const AWS = require('aws-sdk');
 
 const s3 = new AWS.S3({ region: 'us-west-2' });
 
-const params = { Bucket: 'testingbucket1clu', Key: 'funny.jpg' };
+const params = { Bucket: 'testingbucket1clu', Key: 'Funny.jpg' };
 
 s3.deleteObject(params, function (err, data) {
   if (err) {
