@@ -2,7 +2,7 @@ const AWS = require('aws-sdk');
 
 const s3 = new AWS.S3({ region: 'us-west-2' });
 
-const params = { Bucket: 'testingbucket4clu' };
+const params = { Bucket: 'testingbucket2clu' };
 
 // only can delete an empty buckett this way.
 s3.deleteBucket(params, function (err, data) {
