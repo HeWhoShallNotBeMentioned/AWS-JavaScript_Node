@@ -6,8 +6,8 @@ const client = new S3Client({ region: 'us-west-2' });
     const input = {
       Bucket: 'testingbucket1clu',
     };
-    const command = new DeleteBucketCommand(input);
-    const response = await client.send(command);
+
+    const response = await client.send(new DeleteBucketCommand(input));
     console.log(`Bucket ${input.Bucket} deleted.  \n\n   `, response);
   } catch (err) {
     console.log(
