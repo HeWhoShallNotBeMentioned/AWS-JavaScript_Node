@@ -7,8 +7,8 @@ const client = new S3Client({ region: 'us-west-2' });
     const input = {
       Bucket: 'testingbucket1clu',
     };
-    const command = new DeleteBucketPolicyCommand(input);
-    const response = await client.send(command);
+
+    const response = await client.send(new DeleteBucketPolicyCommand(input));
     console.log(
       `Bucket ${input.Bucket} policy file deleted.  \n\n   `,
       response
