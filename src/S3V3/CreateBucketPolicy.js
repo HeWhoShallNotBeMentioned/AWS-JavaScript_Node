@@ -2,6 +2,8 @@ import { S3Client, PutBucketPolicyCommand } from '@aws-sdk/client-s3';
 
 const client = new S3Client({ region: 'us-west-2' });
 
+// only works if Block Public Policy rules in AWS Console are turned off.
+
 (async () => {
   try {
     const BUCKET_NAME = 'testingbucket1clu';
