@@ -8,7 +8,10 @@ const client = new S3Client(config);
 
     const response = await client.send(new ListObjectsCommand(input));
 
-    console.log(`Object in ${input.Bucket} $:  \n\n   `, response.Contents);
+    console.log(`Object in ${input.Bucket} $:  \n\n   `, response);
+    response.Contents.forEach(function (element, index) {
+      console.log(`\n${element.Key}`);
+    });
   } catch (err) {
     console.log(
       `\n\nError.....Unable to delete object(s) for ${input.Bucket}  \n\n`,
