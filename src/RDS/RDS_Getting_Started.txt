@@ -11,3 +11,35 @@ user and password should be what you set during the database creation on AWS.
 Test the connection. Troubleshoot as necessary.
 Press ok to exit.
 Double click on the connection on your list of connections.
+
+Commands to use:
+
+SHOW DATABASES;
+
+CREATE DATABASE mydb
+
+USE mydb;
+
+SHOW TABLES;
+
+CREATE TABLE Person(
+PersonID INT NOT NULL AUTO_INCREMENT,
+LastName VARCHAR(255),
+FirstName VARCHAR (255),
+Email VArCHAR (255),
+PRIMARY KEY (PersonID)
+)
+
+DESCRIBE mydb.Person;
+
+SELECT * FROM Person;
+
+INSERT INTO Person(LastName, FirstName, Email)
+VALUES("Hetrick", "Hetrick","bookwormsrus@gmail.com");
+
+// Updates the LastName file of records with PersonID of 1.
+UPDATE Person SET LastName="updated" WHERE PersonID="1";
+
+DELETE FROM Person WHERE PersonID="1";
+
+
