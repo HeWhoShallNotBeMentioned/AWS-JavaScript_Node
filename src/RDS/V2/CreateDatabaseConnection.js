@@ -1,7 +1,6 @@
 const mysql = require('mysql');
 const dotenv = require('dotenv');
 dotenv.config();
-console.log('password', process.env.RDS_Database_Password);
 
 const con = mysql.createConnection({
   host: process.env.host,
