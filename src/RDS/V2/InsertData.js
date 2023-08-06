@@ -21,7 +21,7 @@ con.connect(function (err, data) {
   } else {
     console.log('\n\nSUCCESS!!!\n\n    DB Instance Connected\n\n', data);
     const sql =
-      'INSERT INTO customers(name,email) VALUES("Beckett", "Beckett@gmail.com")';
+      'INSERT INTO customers(name,email) VALUES("Monty", "Monty@gmail.com")';
 
     con.query(sql, function (err, result) {
       if (err) {
