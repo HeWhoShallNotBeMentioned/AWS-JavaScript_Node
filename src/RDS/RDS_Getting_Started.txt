@@ -42,4 +42,4 @@ UPDATE Person SET LastName="updated" WHERE PersonID="1";
 
 DELETE FROM Person WHERE PersonID="1";
 
-
+DROP TABLE Person;
