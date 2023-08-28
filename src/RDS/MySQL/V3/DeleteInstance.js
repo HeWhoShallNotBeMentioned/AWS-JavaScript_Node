@@ -2,9 +2,9 @@ import { RDSClient, DeleteDBInstanceCommand } from '@aws-sdk/client-rds';
 const client = new RDSClient({ region: 'us-west-2' });
 (async () => {
   const input = {
-    DBInstanceIdentifier: 'test-mysql-instance',
+    DBInstanceIdentifier: 'melanie',
     SkipFinalSnapshot: false,
-    FinalDBSnapshotIdentifier: 'test-mysql-instance-snapshot',
+    FinalDBSnapshotIdentifier: 'melanie-snapshot',
     DeleteAutomatedBackups: true,
   };
 

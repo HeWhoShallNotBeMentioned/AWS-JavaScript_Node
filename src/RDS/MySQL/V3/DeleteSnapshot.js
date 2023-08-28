@@ -2,7 +2,7 @@ import { RDSClient, DeleteDBSnapshotCommand } from '@aws-sdk/client-rds';
 const client = new RDSClient({ region: 'us-west-2' });
 (async () => {
   const input = {
-    DBSnapshotIdentifier: 'test-mysql-instance-snapshot',
+    DBSnapshotIdentifier: 'melanie-snapshot',
   };
 
   try {
