@@ -9,7 +9,7 @@ const params = {
 // leave params out of the function call if you want all of the security groups in your account.
 // for specific group(s) use the params
 
-ec2.describeSecurityGroups(function (err, data) {
+ec2.describeSecurityGroups(params, function (err, data) {
   if (err)
     console.log(
       `\nUnable to describe EC2 Instance(s).\n\n    `,
