@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "AWS with Node.js and Elastic BeanStalk ",
   "main": "index.js",
-
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.363.0",
+    "@aws-sdk/client-ec2": "^3.405.0",
     "@aws-sdk/client-iam": "^3.354.0",
     "@aws-sdk/client-rds": "^3.385.0",
     "@aws-sdk/client-s3": "^3.370.0",
