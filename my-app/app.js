@@ -17,11 +17,11 @@
   });
 
   app.get('/api/items', (req, res) => {
-    let sql = 'SELECT * FROM items';
-    let query = connection.query(sql, (err, results, fields) => {
+    const sql = 'SELECT * FROM items';
+    const query = connection.query(sql, (err, results) => {
       if (err) throw err;
-      //console.log('query', query);
-      res.send(apiResponse(results, fields));
+
+      res.send(apiResponse(results));
     });
   });
 
@@ -29,20 +29,51 @@
     const data = { title: req.body.title, body: req.body.body };
 
     const sql = `INSERT INTO items SET?`;
-    const query = connection.query(sql, data, (err, results, fields) => {
+    const query = connection.query(sql, data, (err, results) => {
       if (err) throw err;
-      //console.log('query', query);
-      fields = JSON.stringify(fields);
-      res.send(apiResponse(results, fields));
+
+      res.send(apiResponse(results));
     });
   });
 
-  function apiResponse(results, fields) {
+  app.get('/api/items/:id', (req, res) => {
+    const sql = 'SELECT * FROM items WHERE id=' + req.params.id;
+    const query = connection.query(sql, (err, results) => {
+      if (err) throw err;
+
+      res.send(apiResponse(results));
+    });
+  });
+
+  app.put('/api/items/:id', (req, res) => {
+    const sql =
+      "UPDATE items SET title='" +
+      req.body.title +
+      "', body='" +
+      req.body.body +
+      "'WHERE id=" +
+      req.params.id;
+    const query = connection.query(sql, (err, results) => {
+      if (err) throw err;
+
+      res.send(apiResponse(results));
+    });
+  });
+
+  app.delete('/api/items/:id', (req, res) => {
+    const sql = 'DELETE FROM items WHERE id=' + req.params.id + '';
+    const query = connection.query(sql, (err, results) => {
+      if (err) throw err;
+
+      res.send(apiResponse(results));
+    });
+  });
+
+  function apiResponse(results) {
     return JSON.stringify({
       status: 200,
       error: null,
       response: results,
-      fields: fields,
     });
   }
 
