@@ -18,14 +18,19 @@
 
   app.get('/api/items', (req, res) => {
     let sql = 'SELECT * FROM items';
-    let query = conn.query(sql, (err, results) => {
+    let query = connection.query(sql, (err, results, fields) => {
       if (err) throw err;
-      res.send(apiResponse(results));
+
+      res.send(apiResponse(results, fields));
     });
   });
 
-  function apiResponse(results) {
-    return JSON.stringify({ status: 200, error: null, response: results });
+  function apiResponse(results, fields) {
+    return JSON.stringify({
+      status: 200,
+      error: null,
+      response: [results, fields],
+    });
   }
 
   app.listen(process.env.PORT, () => {
