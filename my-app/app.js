@@ -20,7 +20,19 @@
     let sql = 'SELECT * FROM items';
     let query = connection.query(sql, (err, results, fields) => {
       if (err) throw err;
+      //console.log('query', query);
+      res.send(apiResponse(results, fields));
+    });
+  });
 
+  app.post('/api/items', (req, res) => {
+    const data = { title: req.body.title, body: req.body.body };
+
+    const sql = `INSERT INTO items SET?`;
+    const query = connection.query(sql, data, (err, results, fields) => {
+      if (err) throw err;
+      //console.log('query', query);
+      fields = JSON.stringify(fields);
       res.send(apiResponse(results, fields));
     });
   });
@@ -29,14 +41,15 @@
     return JSON.stringify({
       status: 200,
       error: null,
-      response: [results, fields],
+      response: results,
+      fields: fields,
     });
   }
 
   app.listen(process.env.PORT, () => {
     console.log('Server started...');
     if (connection.config.host) {
-      console.log('database connected');
+      console.log('Database Connected...');
     }
   });
 })();
