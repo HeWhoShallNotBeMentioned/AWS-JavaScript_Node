@@ -83,4 +83,5 @@
       console.log('Database Connected...');
     }
   });
+  module.exports = app;
 })();
