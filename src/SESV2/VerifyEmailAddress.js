@@ -3,7 +3,7 @@ const AWS = require('aws-sdk');
 const ses = new AWS.SES({ region: 'us-west-2' });
 
 var params = {
-  EmailAddress: 'cunderwoodmn@gmail.com',
+  EmailAddress: 'cunderwoodmn@yahoo.com',
 };
 ses.verifyEmailIdentity(params, function (err, data) {
   if (err) {
@@ -17,4 +17,4 @@ ses.verifyEmailIdentity(params, function (err, data) {
   }
 });
 
-  // "type": "module",
+// "type": "module",
