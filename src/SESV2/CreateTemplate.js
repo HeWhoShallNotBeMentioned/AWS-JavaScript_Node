@@ -4,8 +4,9 @@ const ses = new AWS.SES({ region: 'us-west-2' });
 
 var params = {
   Template: {
-    TemplateName: 'SmitsonIsSleeping',
-    HtmlPart: '<h1>SMITHSON!!!!!!</h1>',
+    TemplateName: 'SmithsonIsSleeping',
+    HtmlPart:
+      'Cats conserve energy by sleeping for an average of 13 to14 hours a day. Cats have flexible bodies and teeth adapted for hunting small animals such as mice and rats. A group of cats is called a clowder, a male cat is called a tom, a female cat is called a molly or queen while young cats are called kittens.',
     SubjectPart: 'AWS Course Sample',
     TextPart:
       'Cats conserve energy by sleeping for an average of 13 to14 hours a day. Cats have flexible bodies and teeth adapted for hunting small animals such as mice and rats. A group of cats is called a clowder, a male cat is called a tom, a female cat is called a molly or queen while young cats are called kittens.',
